@@ -10,42 +10,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-black">
-    <main>
-        <div class="w-screen h-screen relative overflow-x-hidden">
-            <!-- Div containing the background wallpaper -->
-            <div class="fundo1 w-[937.15px] h-[102.80px] origin-top-left rotate-[27.60deg] rounded-full blur-[113px] z-0"></div>
-            <!-- Navbar -->
-            <navbar class="container w-screen h-10 flex z-10 relative ">
-                <!-- Dropdown -->
-                <div class="pl-8">
-                    <img src="./images/union.jpeg" alt="Toggler">
-                </div>
-                <!-- End Dropdown -->
-                <!-- Globe -->
-                <div class="relative bottom-1 left-1">
-                    <img src="images/globe.png" alt="globe" class="float-left w-[47px] h-[22px] relative">
-                </div>
-                <!-- End globe -->
-                <!-- Languages -->
-                    <div class="relative right-1">
-                        <p class=" font-inter text-white text-[10px] font-extrabold ">Idioma</p>  
+    <!-- Navbar -->
+    <nav>
+        <div class="max-w-screen-xl h-10 grid grid-cols-2">
+            <div class="flex text-white items-center">
+                <div>
+                    <div class="pl-8">
+                        <img src="./images/union.jpeg" alt="Toggler">
                     </div>
-                    <div class="relative right-1">
+                </div>
+                <div>
+                    <div>
+                        <img src="images/globe.png" alt="globe" class="w-[46px] h-[26px]">
+                    </div>
+                </div>
+                <div class="relative right-1">
+                    <div class="flex">
+                        <p class="font-inter text-white text-[10px] font-extrabold ">Idioma</p>
                         <img src="images/expand-arrow.png" alt="expand-arrow">
                     </div>
-                <!-- End Languages -->
-                <!-- Vector(carrinho) -->
-                <div class="absolute right-20">
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-[17px] w-[100%] relative right-3">
+                <div class="">
                     <a class="text-white"><img src="images/vector.png" alt="car"></a>
                 </div>
-                <!-- End Vector(carrinho) -->
-                <!-- Search icon -->
-                <div class="absolute right-12">
+                <div>
                     <a class="text-white"><img src="images/search.png" alt="search"></a>
                 </div>
-                <!-- End Search icon --> 
-            </navbar>
-            <!-- End navbar -->
+            </div>        
+        </div>
+    </nav>
+    <div class="w-[100%] h-[100%] relative overflow-x-hidden">
+        <!-- Div containing the background wallpaper --> 
+        <!-- End navbar -->
+    <main>
+         
             <!-- Social media -->
             <div class="flex flex-col place-items-center w-[40px] relative left-6 gap-1 ">
                 <div><a href="https://www.facebook.com/Botafogo/?locale=pt_BR"><img src="./images/icons/facebook.png" alt="facebook"></a></div>
@@ -62,7 +62,7 @@
                 <div>
                     <h1 class="inline text-white font-inter font-bold text-2xl">B O T A</h1>
                     <h1 class="inline text-amber-500 font-inter font-bold text-2xl">F O G O</h1>
-                    <H2 class="text-white font-inter font-normal text-2xl">STORE</H2>
+                    <h2 class="text-white font-inter font-normal text-2xl">STORE</h2>
                 </div>
             </div>
             <!-- End Botafogo Logo -->
