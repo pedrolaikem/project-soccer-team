@@ -1,52 +1,268 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botafogo de Futebol e Regatas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-black ">
-    <!-- Div with background image -->
-    <div class="absolute w-screen h-screen z-[-1] flex items-center justify-center ">
-        <div class="w-[200px] h-[200px] sm:w-[400px] sm:h-[300px] bg-neutral-800 rounded-[50%] blur-[90.5px] fixed top-[20%]"></div>
-        <div class="w-[150px] h-[200px] fundo2 sm:w-[268.33px] sm:h-[254.77px] origin-top-left rotate-[27.60deg] rounded-[50%] blur-[113px] fixed top-[55%] right-[60%] lg:right-[90%] "></div>
-        <div class="w-[150px] h-[200px] fundo3 sm:w-[268.33px] sm:h-[254.77px] origin-top-left rotate-[27.60deg] rounded-[19px] blur-[63.5px] fixed top-[85%] left-[90%]"></div>
-    </div>
-    <!-- End div with background image -->
-    <!-- Navbar -->
-    <nav class="pt-[60px] sm:pt-[112px]">
-        <div class="grid grid-cols-5 justify-items-center place-items-center">
-            <div class="">
-                <i>
-                    <img src="./images/union.jpeg" alt="menu">
-                </i>
-            </div>
-            <div class="flex items-center justify-center text-white mr-4">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Botafogo de Futebol e Regatas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <!-- Scripts -->
+        <script src="./scripts/switchModes.js"></script>
+        <!-- End Scripts -->
+    </head>
+    <body class="bg-black " id="body">
+        <!-- Div with background image -->
+        <div class="absolute w-screen h-screen z-[-1] flex items-center justify-center ">
+            <div class="w-[200px] h-[200px] sm:w-[400px] sm:h-[300px] bg-neutral-800 rounded-[50%] blur-[90.5px] fixed top-[30%]"></div>
+            <div class="w-[150px] h-[200px] fundo2 sm:w-[268.33px] sm:h-[254.77px] origin-top-left rotate-[27.60deg] rounded-[50%] fixed top-[55%] right-[60%] lg:right-[90%] "></div>
+            <div class="w-[150px] h-[200px] fundo3 sm:w-[268.33px] sm:h-[254.77px] origin-top-left rotate-[27.60deg] rounded-[268.332px] blur-[90.5px] fixed top-[75%] left-[90%]"></div>
+        </div>
+        <!-- End div with background image -->
+        <!-- Navbar -->
+        <nav>
+            <div class="pl-[15px] sm:pt-[62px] flex items-center justify-center">
                 <div class="">
-                    <img src="./images/globe.png" alt="globe" class="w-[46px] h-[25px] ">
-                </div>
-                <div class="">
-                    <span class="font-inter font-extrabold text-[10px]">Idioma</span>
+                    <i>
+                        <img src="./images/union.jpeg" alt="menu">
+                    </i>
                 </div>
                 <div>
-                    <img src="./images/expand-arrow.png" alt="arrow-right">
+                    <i><img src="images/globe.png" alt="globe" class="w-[46px]"></i>
+                </div>
+                <div class="text-white font-inter text-[10px] font-extrabold ">
+                    <span>Idioma</span>
+                </div>
+                <div class="">
+                    <i><img src="images/expand-arrow.png" alt="seta"></i>
+                </div>
+                <div class="flex flex-col items-center pt-[60px] pl-2 sm:pl-5 gap-1">
+                    <div>
+                        <img src="images/botafogo-logo-escudo-11.png" alt="Botafogo" >
+                    </div>
+                    <div>
+                        <span class="text-white font-inter font-extrabold text-[14px]">O GLORIOSO</span>
+                    </div>
+                </div>
+                <div class="pl-[60px] sm:ml-5">
+                    <i><img src="images/vector.png" alt="carrinho"></i>
+                </div>
+                <div class="pl-[10px]">
+                    <i><img src="images/search.png" alt="pesquisar"></i>
+                </div>
+            </div>   
+        </nav>
+        <!-- End navbar -->
+        <main class="flex justify-center items-center pt-6">
+            <!-- Social media -->
+            <div class="flex flex-col items-center w-[50px] absolute top-32 sm:top-48 left-4 sm:left-6 gap-[6px]">
+                <i><a href="https://www.facebook.com/Botafogo/?locale=pt_BR"><img src="./images/icons/facebook.png" alt="facebook"></a></i>
+                <i><a href="https://www.instagram.com/botafogo/"><img src="./images/icons/instagram.png" alt="instagram"></a></i>
+                <i><a href="https://twitter.com/Botafogo"><img src="./images/icons/twitter.png" alt="twitter"></a></i>
+                <i><a href="https://www.tiktok.com/@botafogo"><img src="./images/icons/tiktok.png" alt="tiktok"></a></i>
+                <i><button onclick="switchModes()"><img src="./images/icons/black-and-white.png" alt="" class=""></button></i>
+            </div>
+            <!-- End Social media -->
+            <div>
+                <!-- Tickets area -->
+                <div class="flex pb-6 pl-4 flex-col items-center justify-center gap-[13px]">
+                    <div>
+                        <p class="font-inter text-white font-bold text-[13px]">
+                            GARANTA JÁ O SEU INGRESSO
+                        </p>
+                    </div>
+                    <div class=" flex justify-center">
+                        <div class="flex w-[207px] h-10 bg-white rounded-[10px] items-center justify-center">
+                            <a class="font-inter text-black font-bold text-[15px]">
+                                COMPRAR INGRESSO
+                            </a>
+                        </div>   
+                    </div>  
+                </div>
+                <!-- End tickets area -->
+                <div class="container w-screen relative bottom-[30px]">
+                    <i class="float-right"><img src="images/icons/web-accessibility.png" alt="web-accessibility"></i>
+                </div>
+                <!-- Jogos e tabela -->
+                <div class="container grid grid-cols-2 place-items-center relative">
+                    <div class="w-[181px] h-[252px] bg-black rounded-[19px] text-center">
+                        <p class="text-white text-xs font-black font-inter leading-normal relative top-[14px] text-start left-[20px]">RESULTADO DOS JOGOS</p>
+                        <!-- Game results -->
+                        <div class="container grid grid-cols-3 text-white relative top-[23px] gap-y-[9px]">
+                            <div class="w-[35px] h-[33px] bg-zinc-800 rounded-[7px] relative left-[14px] text-center">
+                                <p class="font-bold text-lg font-inter">29</p>
+                                <p class="text-[7px] font-medium font-inter relative bottom-1">OUT</p>
+                            </div>
+                            <div class="relative right-1 text-start">
+                                <p class="text-[3px] font-inter font-light">CAMPEONATO BRASILEIRO 2023</p>
+                                <p class="text-[9px] font-inter font-extrabold">BOTAFOGO<br>CUIABÁ</p>
+                            </div>
+                            <div class="text-white text-[9px] font-bold font-inter relative top-[5px] right-[20px] text-end">
+                                <p>0</p>
+                                <p>1</p>
+                            </div>
+                            <div class="w-[35px] h-[33px] bg-zinc-800 rounded-[7px] relative left-[14px] text-center">
+                                <p class="font-bold text-lg font-inter">22</p>
+                                <p class="text-[7px] font-medium font-inter relative bottom-1">OUT</p>
+                            </div>
+                            <div class="relative right-1 text-start">
+                                <p class="text-[3px] font-inter font-light">CAMPEONATO BRASILEIRO 2023</p>
+                                <p class="text-[9px] font-inter font-extrabold whitespace-nowrap">BOTAFOGO<br>ATLÉTICO-PR</p>
+                            </div>
+                            <div class="text-white text-[9px] font-bold font-inter relative top-[5px] right-[20px] text-end">
+                                <p>0</p>
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <!-- End game results -->
+                    <p class="text-white text-xs font-black font-inter leading-normal relative top-10 text-start left-[20px]">PRÓXIMOS JOGOS</p>
+                        <!-- Next games -->
+                    <div class="container grid grid-cols-3 text-white relative top-12 gap-y-[9px]">
+                        <div class="w-[35px] h-[33px] bg-zinc-800 rounded-[7px] relative left-[14px] text-center">
+                            <p class="font-bold text-lg font-inter">01</p>
+                            <p class="text-[7px] font-medium font-inter relative bottom-1">NOV</p>
+                        </div>
+                        <div class="relative right-1 text-start">
+                            <p class="text-[3px] font-inter font-light">CAMPEONATO BRASILEIRO 2023</p>
+                            <p class="text-[9px] font-inter font-extrabold">BOTAFOGO<br>PALMEIRAS</p>
+                        </div>
+                        <div class="text-white text-[9px] font-bold font-inter relative top-[5px] right-[20px] text-end">
+                            <p>3</p>
+                            <p>4</p>
+                        </div>
+                        <div class="w-[35px] h-[33px] bg-zinc-800 rounded-[7px] relative left-[14px] text-center">
+                            <p class="font-bold text-lg font-inter">06</p>
+                            <p class="text-[7px] font-medium font-inter relative bottom-1">NOV</p>
+                        </div>
+                        <div class="relative right-1 text-start">
+                            <p class="text-[3px] font-inter font-light">CAMPEONATO BRASILEIRO 2023</p>
+                            <p class="text-[9px] font-inter font-extrabold whitespace-nowrap">VASCO DA GAMA<br>BOTAFOGO</p>
+                        </div>
+                        <div class="text-white text-[9px] font-bold font-inter relative top-[5px]">
+                            <!-- <p>0</p>
+                            <p>1</p> -->
+                        </div>
+                    </div>     
+                    </div>
+                <!-- End next games -->
+                    <!-- Tabela -->
+                    <div>
+                        <p class="text-center font-inter font-bold text-white text-[15px]">TABELA</p>
+                        <p class="text-center font-inter font-bold text-white text-[5px] pb-[6px]">CAMPEONATO BRASILEIRO|SÉRIE A</p>
+                        <div class="flex flex-col w-[170px] h-[190px] bg-black rounded-2xl text-white">
+                            <div class="w-[157px] h-[26px] bg-zinc-300 rounded-[9px] mt-3 ml-[6px]">
+                                <div class="flex flex-row justify-center items-center gap-[15px] mt-[2px]">
+                                    <p class="text-[13px] text-black font-inter font-extrabold ml-[14px]">1</p>
+                                    <p class="text-[13px] text-black font-inter font-extrabold">BOTAFOGO</p>
+                                    <p class="text-[13px] text-black font-inter font-extrabold">59</p>
+                                </div>
+                            </div>
+                            <!-- Container other teams -->
+                            <div class="flex container w-[170px] h-[158px] whitespace-nowrap">
+                                <div class="flex flex-col w-[7px] h-[117px] text-white text-[10px] font-bold font-inter gap-2 mt-2 ml-7">
+                                        <div>
+                                            <p>2</p>
+                                        </div>
+                                        <div>
+                                            <p>3</p>
+                                        </div>
+                                        <div>
+                                            <p>4</p>
+                                        </div>
+                                        <div>
+                                            <p>5</p>
+                                        </div>
+                                        <div>
+                                            <p>6</p>
+                                        </div>
+                                </div>
+                                <div class="flex flex-col w-[68px] h-[143px] text-white text-[10px] font-medium font-inter ml-[14px] mt-2 gap-2">
+                                        <div>
+                                            <p>PALMEIRAS</p>
+                                        </div>
+                                        <div>
+                                            <p>BRAGANTINO</p>
+                                        </div>
+                                        <div>
+                                            <p>GRÊMIO</p>
+                                        </div>
+                                        <div>
+                                            <p>FLAMENGO</p>
+                                        </div>
+                                        <div>
+                                            <p>ATLÉTICO MG</p>
+                                        </div>
+                                </div>
+                                <div class="flex flex-col w-[68px] h-[143px] text-white text-[10px] font-medium font-inter ml-6 mt-2 gap-2">
+                                        <div>
+                                            <p>56</p>
+                                        </div>
+                                        <div>
+                                            <p>52</p>
+                                        </div>
+                                        <div>
+                                            <p>50</p>
+                                        </div>
+                                        <div>
+                                            <p>50</p>
+                                        </div>
+                                        <div>
+                                            <p>49</p>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- End Container other teams -->
+                            <!-- End Tabela -->
+                        </div>
+                    </div>
+            <!-- End jogos e tabela -->
+                </div>
+                <!-- Carousel -->
+                <div class="container md:w-[100vw] w-[491px] h-[152px] relative mt-[72px]">
+                    <!-- carousel wrapper -->
+                    <div class="flex flex-row gap-[6px]">
+                        <div class="flex flex-col gap-[15px] text-center">
+                            <div>
+                                <img src="./images/carousel/roster.png" alt="roster" class="w-[117px] h-[114px] rounded-2xl">
+                            </div>
+                            <div class="pl-2 ">
+                                <p class="text-white font-black font-inter text-xs">ELENCO</p>
+                            </div>
+                        </div> 
+                        <div class="flex flex-col gap-[15px]">
+                            <div>
+                                <img src="./images/carousel/teambasis.png" alt="team-basis">
+                            </div>
+                            <div class="text-center">
+                                <p class="text-white font-black font-inter text-xs">BASE</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[15px]">
+                            <div>
+                                <img src="./images/carousel/sports.png" alt="sports">
+                            </div>
+                            <div class="text-center">
+                                <p class="text-white font-black font-inter text-xs">ESPORTES</p>
+                            </div>
+                        </div>  
+                        <div class="flex flex-col gap-[15px]">
+                            <div class="w-[117px] h-[114px] rounded-2xl">
+                                <img src="./images/carousel/news.png" alt="news" class="w-[117px] h-[114px] rounded-2xl">
+                            </div>
+                            <div class="text-center">
+                                <p class="text-white font-black font-inter text-xs">NOTÍCIAS</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- End carousel wrapper -->
+                </div>
+                <!-- End Carousel -->
                 </div>
             </div>
-            <div>
-                3
-            </div>
-            <div>
-                4
-            </div>
-            <div>
-                5
-            </div>
-        </div>   
-    </nav>
-    <!-- End navbar -->
-</body>
+        </main>
+    </body>
+    
+    <script src="./scripts/index.js" ></script>
+    
 </html>

@@ -9,10 +9,9 @@
 
 .fundo2 {
     background: linear-gradient(0deg, #382D06 0%, #382D06 100%), linear-gradient(0deg, #363517 0%, #363517 100%), #948F24;
+    filter: blur(56.5px);
 }
 
 .fundo3 {
-    background: linear-gradient(0deg, #342E1E 0%, #342E1E 100%), 
-	linear-gradient(0deg, #0B0A06 0%, #0B0A06 100%), 
-	#000
+    background: linear-gradient(0deg, #342E1E 0%, #342E1E 100%), linear-gradient(0deg, #0B0A06 0%, #0B0A06 100%), #000;
 }
