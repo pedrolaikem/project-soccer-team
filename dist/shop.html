@@ -8,56 +8,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="./scripts/switchModes.js"></script>   
+    <!-- End Scripts -->
 </head>
-<body class="bg-black">
-    <!-- Navbar -->
-    <nav>
-        <div class="max-w-screen-xl h-10 grid grid-cols-2">
-            <div class="flex text-white items-center">
-                <div>
-                    <div class="pl-8">
-                        <img src="./images/union.jpeg" alt="Toggler">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src="images/globe.png" alt="globe" class="w-[46px] h-[26px]">
-                    </div>
-                </div>
-                <div class="relative right-1">
-                    <div class="flex">
-                        <p class="font-inter text-white text-[10px] font-extrabold ">Idioma</p>
-                        <img src="images/expand-arrow.png" alt="expand-arrow">
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-end gap-[17px] w-[100%] relative right-3">
-                <div class="">
-                    <a class="text-white"><img src="images/vector.png" alt="car"></a>
-                </div>
-                <div>
-                    <a class="text-white"><img src="images/search.png" alt="search"></a>
-                </div>
-            </div>        
-        </div>
-    </nav>
-    <div class="w-[100%] h-[100%] relative overflow-x-hidden">
-        <!-- Div containing the background wallpaper --> 
-        <!-- End navbar -->
-    <main>
-         
-            <!-- Social media -->
-            <div class="flex flex-col place-items-center w-[40px] relative left-6 gap-1 ">
-                <div><a href="https://www.facebook.com/Botafogo/?locale=pt_BR"><img src="./images/icons/facebook.png" alt="facebook"></a></div>
-                <div><a href="https://www.instagram.com/botafogo/"><img src="./images/icons/instagram.png" alt="instagram"></a></div>
-                <div><a href="https://twitter.com/Botafogo"><img src="./images/icons/twitter.png" alt="twitter"></a></div>
-                <div><a href="https://www.tiktok.com/@botafogo"><img src="./images/icons/tiktok.png" alt="tiktok"></a></div>
-            </div>
-            <!-- End social media -->
-            <!-- Botafogo Logo -->
-            <div class="flex container w-screen items-center justify-center absolute top-[15%] left-[15px] gap-[17px]">
-                <div class="w-[53px]">
-                    <img src="images/botafogo-logo-escudo-11.png" alt="Botafogo-logo">
+    <body class="bg-black " id="body">
+         <!-- Div with background image -->
+         <div class="absolute w-screen h-screen z-[-1] flex items-center justify-center ">
+             <div class="w-[200px] h-[200px] sm:w-[400px] sm:h-[300px] bg-neutral-800 rounded-[50%] blur-[90.5px] fixed top-[30%]"></div>
+             <div class="w-[345px] h-[429px] bg-neutral-800 rounded-[19px] blur-[127px]"></div>
+         </div>
+         <!-- End div with background image -->
+         <!-- Navbar -->
+         <nav>
+             <div class="pl-8 sm:pl-[40px] sm:pt-[62px] flex items-center">
+                 <div class="">
+                     <i>
+                         <img src="./images/union.jpeg" alt="menu" id="dropdown">
+                     </i>
+                 </div>
+                 <div>
+                     <i><img src="images/globe.png" alt="globe" class="w-[46px]" id="globe"></i>
+                 </div>
+                 <div class="text-white font-inter text-[10px] font-extrabold ">
+                     <span id="idioma">Idioma</span>
+                 </div>
+                 <div class="">
+                     <i><img src="images/expand-arrow.png" alt="seta" id="arrow" ></i>
+                 </div>
+                 <div class="pl-44 ">
+                     <a href="shop.html"><i><img src="images/vector.png" alt="carrinho" id="car"></i></a>
+                 </div>
+                 <div class="pl-[13px]">
+                     <i><img src="images/search.png" alt="pesquisar" id="search"></i>
+                 </div>
+             </div>   
+         </nav>
+         <!-- End navbar -->
+         <main class="pt-6">
+             <!-- Social media -->
+             <div class="flex flex-col items-center w-[50px] absolute top-32 sm:top-28 left-4 sm:left-6 gap-[6px]">
+                 <i><a href="https://www.facebook.com/Botafogo/?locale=pt_BR"><img src="./images/icons/facebook.png" alt="facebook" id="social1"></a></i>
+                 <i><a href="https://www.instagram.com/botafogo/"><img src="./images/icons/instagram.png" alt="instagram" id="social2"></a></i>
+                 <i><a href="https://twitter.com/Botafogo"><img src="./images/icons/twitter.png" alt="twitter" id="social3"></a></i>
+                 <i><a href="https://www.tiktok.com/@botafogo"><img src="./images/icons/tiktok.png" alt="tiktok" id="social4"></a></i>
+                 <i><button onclick="switchModes()"><img src="./images/icons/black-and-white.png" alt="" id="social5"></button></i>
+             </div>
+             <!-- End Social media -->
+
+             <!-- Botafogo Logo -->
+            <div class="flex w-screen items-center justify-center  gap-[17px] pt-2">
+                <div class="w-[53px] h-[57px]">
+                    <img src="images/botafogo-logo.png" alt="Botafogo-logo">
                 </div>
                 <div>
                     <h1 class="inline text-white font-inter font-bold text-2xl">B O T A</h1>
@@ -65,25 +67,28 @@
                     <h2 class="text-white font-inter font-normal text-2xl">STORE</h2>
                 </div>
             </div>
-            <!-- End Botafogo Logo -->
-            <div class="container relative">
-                <h3 class="text-white font-inter font-extrabold text-[15px] text-center"> CAMISA I MASCULINA ALVINEGRA <br>23/24</h3>
-            </div>
+            <!-- End Botafogo Logo -->   
+            
             <!-- Web acessibility button -->
-            <div class="container w-screen relative bottom-[30px]">
+            <div class=" w-screen relative top-[50px] right-0">
                 <i class="float-right"><img src="images/icons/web-accessibility.png" alt="web-accessibility"></i>
             </div>
             <!-- End Web acessibility button -->
+            
             <!-- Items showcase -->
-            <div class="flex flex-col gap-[17px] relative w-screen">
-                <div class="container w-screen flex items-center justify-center gap-[27px] ">
-                    <div class="z-1">
+            <div class=" w-screen flex flex-col justify-center items-center">
+                <h3 class="text-white font-inter font-medium text-[15px] text-center"> CAMISA I MASCULINA ALVINEGRA </h3>
+                <h3 class="text-white font-inter font-extrabold text-[15px] text-center">23/24</h3>
+            </div>
+            <div class="flex flex-col gap-[17px] w-screen pt-2">
+                <div class=" w-screen flex items-center justify-center gap-[27px] ">
+                    <div>
                         <i><img src="/dist/images/shopImages/leftVector.svg" alt="leftArrow"></i>
                     </div>
-                    <div class="w-[279px] h-[297px] rounded-[28px] bg-white z-1 ">
+                    <div class="w-[279px] h-[297px] rounded-[28px] bg-white">
                         <img src="/dist/images/shopImages/botafogoShirt.png" alt="">
                     </div>
-                    <div class="z-1">
+                    <div>
                         <i><img src="/dist/images/shopImages/rightVector.svg" alt="rightArrow"></i>
                     </div>
                 </div>
@@ -92,7 +97,7 @@
                     <h3 class="text-white text-[9px] font-medium font-inter">4x de R$87,49 sem juros</h3>
                 </div>  
             </div>
-            <!-- End Items showcase -->
+            <!-- End Items showcase -->  
             <!-- Buy Customization -->
             <div class="flex ">
                 <!-- Size customization -->
@@ -152,7 +157,7 @@
                 <!-- End Size customization -->
                 <!-- Sponsor customization -->
                 <div class="container w-[50vw] float-right pt-[21px]">
-                    <h1 class="text-white text-center">PERSONALIZAÇÃO</h1>
+                    <h1 class="text-white text-center text-xs font-extrabold font-inter">PERSONALIZAÇÃO</h1>
                     <div class="grid grid-cols-4 pt-[15px] gap-y-[20px] place-items-center">
                         <!-- Sponsor 1 -->
                         <div class="container flex justify-center">
@@ -257,5 +262,6 @@
         </div>
     </main>
     <!-- End main -->
-</body>
+    </body> 
+<script src="./scripts/index.js" ></script>    
 </html>

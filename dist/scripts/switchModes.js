@@ -25,6 +25,9 @@ function switchModes() {
     let txt = document.querySelector('#ticketText')
     let button =  document.querySelector('#buttonTicket')
 
+    //Carousel variables
+    let carousel = document.querySelector('#carousel')
+
     //It makes the background color change between black and white
     if (body.classList.contains('bg-black')) {
         //Light mode
@@ -51,11 +54,15 @@ function switchModes() {
         tik.src = "./images/icons/light-mode/social-media/tik-tok.png"
         darkLight.src = "./images/icons/light-mode/social-media/black-and-white.png"
 
-        // Ticket area
+        // Ticket area light mode
         txt.classList.add('text-black')
         txt.classList.remove('text-white')
         button.classList.add('bg-black', 'text-white')
         button.classList.remove('bg-white', 'text-black')
+
+        //Carousel light mode
+        carousel.classList.add('text-black')
+        carousel.classList.remove('text-white')
 
 
     } else if (body.classList.contains('bg-white')){
@@ -63,7 +70,7 @@ function switchModes() {
         body.classList.add('bg-black')
         body.classList.remove('bg-white')
 
-        //Navbar Dark mode
+        //Navbar dark mode
         dropdown.src = "./images/union.jpeg"
         globe.src = "images/globe.png"
         idioma.classList.remove('text-black')
@@ -77,19 +84,23 @@ function switchModes() {
         glorious.classList.remove('text-black')
 
 
-        //Social media Dark Mode
+        //Social media dark mode
         fb.src= "./images/icons/facebook.png"
         insta.src= "./images/icons/instagram.png"
         tt.src= "./images/icons/twitter.png"
         tik.src= "./images/icons/tiktok.png"
         darkLight.src= "./images/icons/black-and-white.png"
 
-        //Ticket area
+        //Ticket area dark mode
 
         txt.classList.add('text-white')
         txt.classList.remove('text-black')
         button.classList.remove('bg-black', 'text-white')
         button.classList.add('bg-white', 'text-black')
+
+         //Carousel dark mode
+         carousel.classList.add('text-white')
+         carousel.classList.remove('text-black')
     }
     
 }

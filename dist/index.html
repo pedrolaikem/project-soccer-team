@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="style.css">
         <!-- Scripts -->
         <script src="./scripts/switchModes.js"></script>
+        <script src="./scripts/index.js" ></script>
         <!-- End Scripts -->
     </head>
     <body class="bg-black " id="body">
@@ -22,17 +23,17 @@
         <!-- End div with background image -->
         <!-- Navbar -->
         <nav>
-            <div class="pl-[15px] sm:pt-[62px] flex items-center justify-center">
-                <div class="">
-                    <i>
+            <div class="pl-8 sm:pl-[15px] sm:pt-[62px] flex items-center justify-center">
+                <div>
+                    <button onclick="openMenu()" >
                         <img src="./images/union.jpeg" alt="menu" id="dropdown">
-                    </i>
+                    </button>
                 </div>
                 <div>
                     <i><img src="images/globe.png" alt="globe" class="w-[46px]" id="globe"></i>
                 </div>
                 <div class="text-white font-inter text-[10px] font-extrabold ">
-                    <span id="idioma">Idioma</span>
+                    <span id="idioma" >Idioma</span>
                 </div>
                 <div class="">
                     <i><img src="images/expand-arrow.png" alt="seta" id="arrow" ></i>
@@ -46,12 +47,37 @@
                     </div>
                 </div>
                 <div class="pl-[60px] sm:ml-5">
-                    <i><img src="images/vector.png" alt="carrinho" id="car"></i>
+                    <a href="shop.html"><i><img src="images/vector.png" alt="carrinho" id="car"></i></a>
                 </div>
                 <div class="pl-[13px]">
                     <i><img src="images/search.png" alt="pesquisar" id="search"></i>
                 </div>
-            </div>   
+            </div>
+            <div class=" w-[191px] h-[313px] bg-zinc-800 rounded-[14px] backdrop-blur-[42px] absolute z-[999] top-[93px] left-[70px] hidden" id="menu">
+                <ul class="flex flex-col items-center justify-center gap-[10px] pt-7">
+                    <li class="w-[163px] h-[27px] bg-stone-300 rounded-[11px] flex items-center justify-center">
+                        <p class="text-black text-[11px] font-extrabold font-inter -tracking-widest">HOME</p>
+                    </li>
+                    <li class="w-[163px] h-[27px]  rounded-[11px] flex items-center justify-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">ELENCO</p>
+                    </li>
+                    <li class="w-[163px] h-[27px] rounded-[11px] flex items-center justify-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">NOTÍCIAS</p>
+                    </li>
+                    <li class="w-[163px] h-[27px]  rounded-[11px] flex items-center justify-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">SÓCIO</p>
+                    </li>
+                    <li class="w-[163px] h-[27px] rounded-[11px] flex items-center justify-center text-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">PORTAL DA <br>TRANSPARÊNCIA</p>
+                    </li>
+                    <li class="w-[163px] h-[27px]  rounded-[11px] flex items-center justify-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">INGRESSO</p>
+                    </li>
+                    <li class="w-[163px] h-[27px]  rounded-[11px] flex items-center justify-center">
+                        <p class="text-white text-[11px] font-medium font-inter -tracking-widest">NEGÓCIOS</p>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <!-- End navbar -->
         <main class="flex justify-center items-center pt-6">
@@ -66,7 +92,7 @@
             <!-- End Social media -->
             <div>
                 <!-- Tickets area -->
-                <div class="flex pb-6 pl-4 flex-col items-center justify-center gap-[13px]">
+                <div class="flex pb-6 pl-12 sm:pl-4 flex-col items-center justify-center gap-[13px]">
                     <div>
                         <p class="font-inter text-white font-bold text-[13px]" id="ticketText">
                             GARANTA JÁ O SEU INGRESSO
@@ -74,18 +100,18 @@
                     </div>
                     <div class=" flex justify-center">
                         <div class="flex w-[207px] text-black h-10 bg-white rounded-[10px] items-center justify-center" id="buttonTicket">
-                            <a class="font-inter font-bold text-[15px]">
+                            <a href="tickets.html" class="font-inter font-bold text-[15px]">
                                 COMPRAR INGRESSO
                             </a>
                         </div>   
                     </div>  
                 </div>
                 <!-- End tickets area -->
-                <div class="container w-screen relative bottom-[30px]">
+                <div class=" relative bottom-[30px] right-0">
                     <i class="float-right"><img src="images/icons/web-accessibility.png" alt="web-accessibility"></i>
                 </div>
                 <!-- Jogos e tabela -->
-                <div class="container grid grid-cols-2 place-items-center relative">
+                <div class="container pl-2 sm:pl-10 grid grid-cols-2 place-items-center sm:gap-12">
                     <div class="w-[181px] h-[252px] bg-black rounded-[19px] text-center">
                         <p class="text-white text-xs font-black font-inter leading-normal relative top-[14px] text-start left-[20px]">RESULTADO DOS JOGOS</p>
                         <!-- Game results -->
@@ -219,39 +245,39 @@
             <!-- End jogos e tabela -->
                 </div>
                 <!-- Carousel -->
-                <div class="container md:w-[100vw] w-[491px] h-[152px] relative mt-[72px]">
+                <div class="  text-white w-[100vw] h-[152px] mt-[72px]" id="carousel">
                     <!-- carousel wrapper -->
-                    <div class="flex flex-row gap-[6px]">
+                    <div class="flex flex-row gap-[6px] ">
                         <div class="flex flex-col gap-[15px] text-center">
                             <div>
-                                <img src="./images/carousel/roster.png" alt="roster" class="w-[117px] h-[114px] rounded-2xl">
+                                <img src="./images/carousel/roster.png" alt="roster" class="w-[119px] h-[114px] rounded-2xl">
                             </div>
                             <div class="pl-2 ">
-                                <p class="text-white font-black font-inter text-xs">ELENCO</p>
+                                <p class=" font-black font-inter text-xs">ELENCO</p>
                             </div>
                         </div> 
                         <div class="flex flex-col gap-[15px]">
                             <div>
-                                <img src="./images/carousel/teambasis.png" alt="team-basis">
+                                <img src="./images/carousel/teambasis.png" alt="team-basis" class="w-[117px] h-[114px] rounded-2xl">
                             </div>
                             <div class="text-center">
-                                <p class="text-white font-black font-inter text-xs">BASE</p>
+                                <p class=" font-black font-inter text-xs">BASE</p>
                             </div>
                         </div>
                         <div class="flex flex-col gap-[15px]">
                             <div>
-                                <img src="./images/carousel/sports.png" alt="sports">
+                                <img src="./images/carousel/sports.png" alt="sports" class="w-[119px] h-[114px] rounded-2xl">
                             </div>
                             <div class="text-center">
-                                <p class="text-white font-black font-inter text-xs">ESPORTES</p>
+                                <p class=" font-black font-inter text-xs">ESPORTES</p>
                             </div>
                         </div>  
                         <div class="flex flex-col gap-[15px]">
                             <div class="w-[117px] h-[114px] rounded-2xl">
-                                <img src="./images/carousel/news.png" alt="news" class="w-[117px] h-[114px] rounded-2xl">
+                                <a href="news.html"><img src="./images/carousel/news.png" alt="news" class="w-[117px] h-[114px] rounded-2xl"></a>
                             </div>
                             <div class="text-center">
-                                <p class="text-white font-black font-inter text-xs">NOTÍCIAS</p>
+                                <a href="news.html"><p class=" font-black font-inter text-xs">NOTÍCIAS</p></a>
                             </div>
                         </div>  
                     </div>
@@ -263,6 +289,6 @@
         </main>
     </body>
     
-    <script src="./scripts/index.js" ></script>
+    
     
 </html>
